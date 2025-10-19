@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>bo1atit0</title>
+  </head>
+  <body>
+    <article data-testid="test-profile-card" class="card">
+      <div class="container-1">
+        <!-- image -->
+        <div class="image-container">
+          <figure>
+            <img
+              data-testid="test-user-avatar"
+              src="./images/profilePic1-removebg-preview.webp"
+              alt=""
+              class="pic"
+            />
+          </figure>
+        </div>
+
+        <!-- text -->
+        <div class="text">
+          <div class="main-text">
+            <h2 data-testid="test-user-name">Bolatito A. Shorungbe</h2>
+            <p data-testid="test-user-bio">
+              A passionate <span>Frontend Developer</span> with a love for
+              creating beautiful and functional user interfaces. I specialize in
+              HTML, CSS, JavaScript and React and enjoy turning ideas into
+              reality.
+            </p>
+          </div>
+
+          <!-- social links -->
+          <nav
+            data-testid="test-user-social-links"
+            class="links"
+            style="text-align: center"
+          >
+            <a
+              href="https://twitter.com/tito_O_O_"
+              style="color: black"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+            >
+              <i class="fa-brands fa-x-twitter fa-xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bolatito-shorungbe-62a56b272/"
+              style="color: #0072b1"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+            >
+              <i class="fa-brands fa-linkedin-in fa-xl"></i>
+            </a>
+            <a
+              href="https://github.com/dashboard"
+              style="color: white"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+            >
+              <i class="fa-duotone fa-brands fa-github fa-xl"></i>
+            </a>
+          </nav>
+          <!-- Hobbies -->
+          <div class="interests">
+            <section data-testid="test-user-hobbies" class="hobbies">
+              <p>Hobbies</p>
+              <ul>
+                <li>Fashion Illustration</li>
+                <li>Fashion Design</li>
+                <li>Reading</li>
+              </ul>
+            </section>
+
+            <!-- Dislike-->
+            <section data-testid="test-user-dislikes" class="dislikes">
+              <p>Dislikes</p>
+              <ul>
+                <li>Bugs</li>
+                <li>Heat</li>
+                <li>Cats</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- time  -->
+      <div data-testid="test-user-time" class="current-time-utc">
+        <h5>Current Time</h5>
+      </div>
+    </article>
+
+    <script src="index.js"></script>
+  </body>
+</html>
