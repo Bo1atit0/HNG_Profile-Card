@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./contactForm.css" />
+    <script defer src="./contactForm.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <form id="form" action="" class="form" novalidate>
+        <label for="Full-name">Full Name</label>
+        <input
+          type="text"
+          placeholder="Full name"
+          id="Full-name"
+          data-testid="test-contact-name"
+          aria-describedby="name-error"
+          required
+        />
+        <p
+          id="name-error"
+          data-testid="test-contact-error-Fullname"
+          class=""
+          hidden
+        ></p>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          data-testid="test-contact-email"
+          aria-describedby="email-error"
+          required
+        />
+        <p
+          id="email-error"
+          data-testid="test-contact-error-email"
+          class="error-message"
+          hidden
+        >
+          Please enter a valid email (e.g. name@example.com).
+        </p>
+
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          placeholder="Subject"
+          id="subject"
+          data-testid="test-contact-subject"
+          aria-describedby="subject-message"
+          required
+        />
+        <p
+          id="subject-message"
+          data-testid="test-contact-error-subject"
+          class="error-message"
+          hidden
+        >
+          Please enter a subject.
+        </p>
+
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          placeholder="Message"
+          id="message"
+          data-testid="test-contact-message"
+          aria-describedby="message-error"
+          required
+          minlength="10"
+        ></textarea>
+        <p
+          id="message-error"
+          data-testid="test-contact-error-message"
+          class="error-message"
+          hidden
+        >
+          Message must be at least 10 characters long.
+        </p>
+
+        <button type="submit" data-testid="test-contact-submit">Submit</button>
+      </form>
+
+      <div>
+        <p id="success-message" data-testid="test-contact-success" hidden>
+          Message Sent Successfully.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
