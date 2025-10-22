@@ -11,31 +11,189 @@ html {
 }
 
 body {
-  background-image: url(../images/bg.webp);
-  background-position: center;
+  background-color: rgb(4, 4, 19);
+  /* background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   /* height: 100%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  width: 60%;
-  height: 40%;
-  border: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* min-height: 100vh; */
+  height: auto;
+  gap: 30px;
+}
+
+/* NavBar */
+.nav-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(255, 251, 251, 0.411);
+}
+
+.nav-container .nav-items {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container .logo {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: cursive;
+}
+.nav-container .logo span {
+  color: rgb(173, 23, 23);
+}
+.nav-container .nav-items .about {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.nav-container .nav-items .about:hover {
+  color: #fff;
+}
+
+.nav-container .nav-items a button {
+  padding: 0.5rem 1rem;
+  background-color: #6e74dfaa;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.nav-container .nav-items a button:hover {
+  border-radius: 8px;
+  background-color: #4f57f1aa;
+}
+/* End of NavBar */
+
+.container {
+  /* width: auto;
+  height: auto; */
+  padding: 2rem;
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.158)
+  );
+  box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.329);
+  border-radius: 10%;
+  width: 50%;
+  box-shadow: 0 4px 30px rgba(37, 85, 156, 0.616);
 }
 
 .container form {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+}
+.container form label {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 600;
+  color: #ccc;
 }
 
-.input-error {
-  border: 2px solid red;
+.container form input,
+.container form textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 500;
 }
+.container form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.container form .input-div {
+  width: 40vw;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+.container form .input-div:hover {
+  border: 2px solid rgb(65, 105, 192);
+}
+.container form .input-div:focus-within {
+  border: 2px solid rgb(65, 105, 192);
+}
+.container form .input-error {
+  /* border: 2px solid red; */
+  color: rgba(255, 80, 80, 0.9);
+  text-shadow: 0 0 3px rgba(255, 0, 0, 0.2);
+}
+.container form div .success-message {
+  color: green;
+  text-align: center;
+}
+.container form .error-message {
+  color: red;
+}
+.container form .error-message,
+.container form div .success-message {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.container form .error-message.visible,
+.container form .success-message.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container form button {
+  background-image: linear-gradient(120deg, black, rgb(65, 105, 192));
+  padding: 12px 20px;
+  color: #ccc;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  scale: 0.9;
+  transition: all 0.4s linear;
+}
+.container form button:hover {
+  border-radius: 8px;
+  scale: 1;
+  background-image: linear-gradient(120deg, rgb(65, 105, 192), black);
+}
+
+/* .container form .error-message[hidden] {
+  display: block !important;
+  opacity: 0;
+}
+.container form .error-message:not([hidden]) {
+  opacity: 1;
+  border: 1px solid blue;
+} */

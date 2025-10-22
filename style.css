@@ -14,22 +14,78 @@ body {
 body {
   /* background-image: url(./images/bg.webp); */
   background-color: rgb(4, 4, 19);
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: large;
   color: #ccc;
+}
+
+.nav-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(255, 251, 251, 0.411);
+}
+.nav-container .logo {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: cursive;
+}
+.nav-container .logo span {
+  color: rgb(173, 23, 23);
+}
+.nav-container .nav-items {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container .nav-items .about {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.nav-container .nav-items .about:hover {
+  color: #fff;
+}
+
+.nav-container .nav-items a button {
+  padding: 0.5rem 1rem;
+  background-color: #6e74dfaa;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.nav-container .nav-items a button:hover {
+  border-radius: 8px;
+  background-color: #4f57f1aa;
 }
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px auto;
   gap: 20px;
   /* border: 1px solid #ccc;*/
   box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.329);
@@ -119,7 +175,7 @@ body {
 
 .card .text .main-text h2 {
   font-size: clamp(0.7rem, 2.5vw, 1.5rem);
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #4f57f1aa);
 }
 
 .card .text .main-text p {
@@ -127,7 +183,7 @@ body {
 }
 
 .card .text .main-text span {
-  border-bottom: 2px solid rgb(57, 57, 151);
+  border-bottom: 2px solid rgb(65, 105, 192);
 }
 
 .card .text p {
@@ -196,7 +252,7 @@ body {
 
   .card .text .interests {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
   }
 

@@ -8,87 +8,99 @@
     <script defer src="./contactForm.js"></script>
   </head>
   <body>
+    <nav class="nav-container">
+      <a href="../index.html" class="logo"
+        >bo<span>1</span>atit<span>0</span></a
+      >
+      <div class="nav-items">
+        <a class="about" href="./aboutMe/aboutMe.html"><h2>About Me</h2></a>
+        <a href="./contactForm/contactForm.html"><button>Contact Me</button></a>
+      </div>
+    </nav>
+
     <section class="container">
-      <form id="form" action="" class="form" novalidate>
+      <form id="form" action="/" class="form" novalidate>
         <label for="Full-name">Full Name</label>
-        <input
-          type="text"
-          placeholder="Full name"
-          id="Full-name"
-          data-testid="test-contact-name"
-          aria-describedby="name-error"
-          required
-        />
+        <div class="input-div">
+          <input
+            type="text"
+            placeholder="Full name"
+            id="Full-name"
+            data-testid="test-contact-name"
+            aria-describedby="name-error"
+            required
+          />
+        </div>
         <p
           id="name-error"
           data-testid="test-contact-error-Fullname"
-          class=""
-          hidden
+          class="error-message"
         ></p>
 
         <label for="email">Email</label>
-        <input
-          type="email"
-          placeholder="Email"
-          id="email"
-          data-testid="test-contact-email"
-          aria-describedby="email-error"
-          required
-        />
+        <div class="input-div">
+          <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            data-testid="test-contact-email"
+            aria-describedby="email-error"
+            required
+          />
+        </div>
         <p
           id="email-error"
           data-testid="test-contact-error-email"
           class="error-message"
-          hidden
-        >
-          Please enter a valid email (e.g. name@example.com).
-        </p>
+        ></p>
 
         <label for="subject">Subject</label>
-        <input
-          type="text"
-          placeholder="Subject"
-          id="subject"
-          data-testid="test-contact-subject"
-          aria-describedby="subject-message"
-          required
-        />
+        <div class="input-div">
+          <input
+            type="text"
+            placeholder="Subject"
+            id="subject"
+            data-testid="test-contact-subject"
+            aria-describedby="subject-message"
+            required
+          />
+        </div>
         <p
-          id="subject-message"
+          id="subject-error"
           data-testid="test-contact-error-subject"
           class="error-message"
-          hidden
-        >
-          Please enter a subject.
-        </p>
+        ></p>
 
         <label for="message">Message</label>
-        <textarea
-          name="message"
-          placeholder="Message"
-          id="message"
-          data-testid="test-contact-message"
-          aria-describedby="message-error"
-          required
-          minlength="10"
-        ></textarea>
+        <div class="input-div">
+          <textarea
+            name="message"
+            placeholder="Message"
+            id="message"
+            data-testid="test-contact-message"
+            aria-describedby="message-error"
+            required
+            minlength="10"
+          ></textarea>
+        </div>
         <p
           id="message-error"
           data-testid="test-contact-error-message"
           class="error-message"
-          hidden
-        >
-          Message must be at least 10 characters long.
-        </p>
+        ></p>
 
         <button type="submit" data-testid="test-contact-submit">Submit</button>
-      </form>
 
-      <div>
-        <p id="success-message" data-testid="test-contact-success" hidden>
-          Message Sent Successfully.
-        </p>
-      </div>
+        <div>
+          <p
+            id="success-message"
+            class="success-message"
+            data-testid="test-contact-success"
+          >
+            Message Sent Successfully.
+          </p>
+        </div>
+      </form>
     </section>
   </body>
 </html>
