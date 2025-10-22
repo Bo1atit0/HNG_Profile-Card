@@ -1,3 +1,7 @@
+.clip-path-slant {
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,7 +26,7 @@ body {
   align-items: center;
   /* min-height: 100vh; */
   height: auto;
-  gap: 30px;
+  /* gap: 30px; */
   color: #ccc;
 }
 
@@ -35,6 +39,7 @@ body {
   align-items: center;
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 5px rgba(255, 251, 251, 0.411);
+  margin-bottom: 0;
 }
 
 .nav-container .logo {
@@ -89,31 +94,85 @@ main {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
+}
+
+/*  */
+
+.about-me-header {
+  width: 100vw;
+  height: 30vw;
+  /* border: 2px solid snow; */
+  margin-top: 0;
+  background-image: url(../images/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(173, 23, 23);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
 }
 
 main .about {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
+  /* border: 2px solid green; */
+}
+
+main .about section {
+  width: 70vw;
+  height: 25vh;
+  /* border: 2px solid red; */
+}
+
+main .about section .head {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(141, 14, 14, 0.3), rgb(218, 38, 38));
+  backdrop-filter: blur(10px);
+
+  display: flex;
+
+  padding: 4.3rem 1rem;
+  /* border-right: 2px solid blue; */
+
+  position: relative;
+}
+
+main .about section .head h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
 }
 
 .about-me {
-  width: 50%;
+  width: 68%;
+  height: 25vh;
+
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.3),
     rgba(0, 0, 0, 0.158)
   );
   backdrop-filter: blur(10px);
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 1rem;
-  border: 4px;
+  padding: 2rem 3rem;
+  /* border: 4px; */
   border: none;
   box-shadow: 2px 2px 10px #ccc;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 720px) {
